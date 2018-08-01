@@ -1,0 +1,142 @@
+/* Task 1 */
+
+@media print {
+	.tm-sidebar,
+	#about,
+	.heading,
+	.blocks,
+	#ideas,
+	.tm-content-box #contact,
+	[alt="Contact image"] {
+		display: none;
+	}
+	.tm-main-content {
+		margin-left: 0;
+	}
+	.tm-banner-inner {
+		height: 200px;
+	}
+	h2.tm-section-title {
+		color: blue;
+	}
+	section .flex-2-col {
+		flex-direction: column;
+	}
+	.tm-team-description-container {
+		max-width: none;
+	}
+	div .pad {
+		padding: 0 50px;
+	}
+	.tm-content-box {
+		margin-bottom: 0;
+	}
+	.tm-footer {
+		margin-top: 20px;
+	}
+	.tm-banner {
+		height: 250px;
+	}
+	.tm-section-title {
+		margin-top: 10px;
+	}
+}
+
+@media screen {
+	/*Task 2*/
+	#about .img-fluid {
+		border-radius: 100%;
+	}
+	#about .tm-section-title:hover {
+		color: #fff;
+		background: #31B0D5;
+		font-weight: bold;
+	}
+	/*Task 3*/
+	p:first-letter {
+		color: #76cdd7;
+		font-size: 30px;
+	}
+	/*Task 4*/
+	.tm-sidebar,
+	.tm-content-box {
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	}
+    /* Task 5*/
+    section,#home.tm-content-box {
+        position: relative;
+    }
+    section::before,#home.tm-content-box::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-top: 10px solid #31B0D5;
+        border-right: 50px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 50px solid #31B0D5;
+    }
+	/*Task 6*/
+	#ideas h2.tm-section-title {
+		color: gainsboro;
+		letter-spacing: 5px;
+	}
+	/*Task 7*/
+	h2+p {
+		font-style: italic;
+	}
+	/*Task 8*/
+	div.tm-content-box div.pad p.tm-section-description {
+		text-indent: 25px;
+		line-height: 30px;
+	}
+	/*Task 9*/
+	section.heading h2 {
+		text-align: center;
+	}
+	section.heading a:visited {
+		color: silver;
+	}
+	section.heading a {
+		color: #000;
+	}
+	section.heading li:nth-child(2n+1):nth-child(-n+3):after {
+		content: "New";
+		font-size: 10px;
+		color: red;
+		vertical-align: top;
+	}
+	section.heading h2,
+	section.heading a:hover {
+		color: #76cdd7;
+	}
+	/*Task 10*/
+	section.blocks ul.gallery-container p:first-letter {
+		color: #363c3d;
+	}
+	section.blocks ul.gallery-container li:nth-child(2n+1) {
+		background-color: #F2F2F2;
+	}
+	/*Task 11*/
+	div.tm-sidebar nav.tm-main-nav li:nth-child(-n+3) {
+		border-bottom: 2px dotted silver;
+	}
+	/*Task 12*/
+	.submit-btn,
+	input[type="text"] {
+		color: red;
+	}
+	div.mandatory-field::after {
+		content: "*";
+		font-size: 15px;
+		font-weight: bold;
+		color: red;
+	}
+	#contact .submit-btn:hover {
+		color: #fff;
+		background: #31B0D5;
+	}
+}
