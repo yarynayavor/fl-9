@@ -113,6 +113,10 @@
 	section.heading a:hover {
 		color: #76cdd7;
 	}
+
+	section.heading a:hover {
+		border-bottom: 1px solid #76cdd7;
+	}
 	/*Task 10*/
 	section.blocks ul.gallery-container p:first-letter {
 		color: #363c3d;
