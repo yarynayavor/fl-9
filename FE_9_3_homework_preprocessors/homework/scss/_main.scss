@@ -1,0 +1,172 @@
+body {
+    background: $backgroundBody;
+}
+div.main-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+@mixin borderNav($borderNav) {
+    border-bottom: 1px solid $borderNav;
+    border-top: 1px solid $borderNav;
+}
+@mixin flex($flex, $spaceBetween) {
+    display: $flex;
+    justify-content: $spaceBetween;
+}
+@mixin clear() {
+    content: "";
+    display: table;
+    clear: both;
+}
+header {
+    @include flex($flex: flex,$spaceBetween:space-between);
+    nav {
+        align-self: flex-end;
+        margin-bottom: 35px;
+        padding: 20px 0;
+        @include borderNav($borderNav: $border);
+        a {
+            padding: 0 80px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $linkNav;
+            &:hover {
+                color: $linkHover;
+            }
+        }
+    }
+}
+div.logo {
+    img {
+        width: 350px;
+    }
+}
+div.toolbar {
+    text-align: right;
+    margin: 20px 0;
+    input {
+        border: 1px solid $toolbar;
+        padding: 10px 15px;
+        background: $toolbarBackground;
+    }
+    ::placeholder {
+        color: $toolbar;
+        font-weight: bold;
+    }
+}
+div.post-list {
+    @include flex($flex: flex,$spaceBetween:space-between);
+    flex-wrap: wrap;
+    align-items: flex-start;
+    article {
+        margin-bottom: 10px;
+        background: $articleBackground;
+        flex: 47%;
+        max-width: 47%;
+        padding: 10px;
+        font-family: $fontFamily;
+        .post-description {
+            color: $postDescription;
+            padding: 0 0 10px;
+            font-size: 14px;
+            border-bottom: 1px solid $border;
+        }
+        h3 {
+            margin: 5px 0 0;
+            text-transform: uppercase;
+            color: $h3Color;
+        }
+        p {
+            color: $pMain;
+            font-size: 16px;
+            font-family: $fontFamily;
+            line-height: 25px;
+            &:first-of-type {
+                margin: 0;
+            }
+        }
+        div {
+            padding: 20px;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+#about {
+    &:after {
+        @include clear();
+    }
+    h1 {
+        text-align: right;
+        text-transform: uppercase;
+        color: $h1Color;
+        font-family: $fontFamily;
+        margin: 70px 0 0;
+    }
+    p {
+        font-family: $fontFamily;
+        color: $pColor;
+        line-height: 25px;
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+    img {
+        max-width: 100%;
+    }
+}
+#contact {
+    h1 {
+        font-family: $fontFamily;
+        text-align: right;
+        color: $h1Color;
+        margin: 30px 0 0;
+    }
+    h4 {
+        font-family: $fontFamily;
+        text-align: right;
+        color: $h1Color;
+        margin: 0 0 20px;
+        text-transform: uppercase;
+    }
+    form {
+        &:after {
+            @include clear();
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 96%;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border: 1px solid $border;
+            background: $toolbarBackground;
+            &::placeholder {
+                font-family: $fontFamily;
+                color: $placeholder;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+        input[type="submit"] {
+            float: right;
+            padding: 10px 90px;
+            text-transform: uppercase;
+            color: $colorInputSubmit;
+            background: $InputSubmitBackground;
+            border: 0;
+            font-family: $fontFamily;
+            font-size: 16px;
+            font-weight: 500;
+            &:hover {
+                background: $InputSubmitHover;
+                cursor: pointer;
+            }
+        }
+    }
+}
+footer {
+    span {
+        color: $footer;
+        font-family: $fontFamily;
+    }
+}
