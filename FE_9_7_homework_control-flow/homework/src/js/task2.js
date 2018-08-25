@@ -23,7 +23,7 @@ while (startGame) {
             `Possible prize on current attempt: ${price} $`);
         if (!isNaN(user) && parseFloat(user) === parseInt(user) && parseInt(user) === number) {
             priceWin += price;
-            console.log(`Congratulation! Your prize is: ${price} $`);
+            alert(`Congratulation! Your prize is: ${price} $`);
             let newGame = confirm('Do you want to continue?');
             if (newGame) {
                 number = Math.floor(Math.random() * (n + NUM_ONE));
@@ -32,7 +32,7 @@ while (startGame) {
                 price = priceMax;
                 n *= 2;
             } else {
-                console.log(`Thank you for a game. Your prize is: ${priceWin} $`);
+                alert(`Thank you for a game. Your prize is: ${priceWin} $`);
                 startGame = confirm('Do you want to play again?');
                 n = NUM_FIVE;
                 number = Math.floor(Math.random() * (n + NUM_ONE));
@@ -42,7 +42,7 @@ while (startGame) {
             attempt--;
             price = Math.floor(price / 2);
             if (attempt < NUM_ONE) {
-                console.log(`Thank you for a game. Your prize is: ${priceWin} $`);
+                alert(`Thank you for a game. Your prize is: ${priceWin} $`);
                 startGame = confirm('Do you want to play again?');
                 priceWin = 0;
             }
