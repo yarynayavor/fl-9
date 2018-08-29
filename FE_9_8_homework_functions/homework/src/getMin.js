@@ -1,7 +1,7 @@
 let getMin = (...arg) => {
-    let min = undefined;
+    let min = 0;
     for (let i = 0; i < arg.length; i++) {
-        if (min === undefined || min > arg[i]) {
+        if (min === 0 || min > arg[i]) {
             min = arg[i];
         }
     }

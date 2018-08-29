@@ -45,8 +45,10 @@ let getAdultAppleLovers = (arr) => {
 /* 6 task */
 let keys = (obj) => {
     let newArr = [];
-    for (el in obj) {
-        newArr.push(el);
+    for (let el in obj) {
+        if(el) {
+            newArr.push(el);
+        }
     }
     return newArr;
 }
@@ -54,15 +56,17 @@ let keys = (obj) => {
 /* 7 task */
 let values = (obj) => {
     let newArr = [];
-    for (el in obj) {
-        newArr.push(obj[el]);
+    for (let el in obj) {
+        if(el) {
+            newArr.push(obj[el]);
+        }
     }
     return newArr;
 }
 
 /* 8 task */
 let showFormattedDate = (date) => {
-    let month = date.toLocaleString("en-us", { month: "short" });
+    let month = date.toLocaleString('en-us', { month: 'short' });
     let year = date.getFullYear();
     let day = date.getDate();
     return `It is ${day} of ${month}, ${year}`;
